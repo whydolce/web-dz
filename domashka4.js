@@ -1,43 +1,28 @@
-let customer1 = "alexx";
-let customer2 = "Askar";
+let students = [
+    { name: 'Aibek', grade: 92 },
+    { name: 'Mirbek', grade: 76 },
+    { name: 'Alif', grade: 85 },
+    { name: 'Azamat', grade: 99 },
+    { name: 'Bekzat', grade: 65 },
+    { name: 'Nursultan', grade: 88 },
+    { name: 'Adilet', grade: 73 },
+    { name: 'Islam', grade: 55 },
+    { name: 'Emir', grade: 81 },
+    { name: 'Daniyar', grade: 60 }
+]
 
-let price1 = 120;
-let quantity1 = 4;
-
-let price2 = 200;
-let quantity2 = 2;
-
-function compareCarts(
-  customer1,
-  customer2,
-  price1,
-  quantity1,
-  price2,
-  quantity2,
-  num
-) {
-  let total1 = price1 * quantity1;
-  let total2 = price2 * quantity2;
-
-  if (total1 > total2) {
-    console.log(customer1 + " bolshe");
-    console.log("raznitsa", total1 - total2);
-  } else if (total2 > total1) {
-    console.log(customer2 + " bolshe");
-    console.log("raznitsa", total2 - total1);
-  } else {
-    console.log("Both customers spent the same amount");
-  }
-
-  console.log((total1 - total2) * num);
+for (let student of students) {
+    if (student.grade >= 98) {
+        student.grade = 'A'
+    } else if (student.grade >= 80) {
+        student.grade = 'B'
+    } else if (student.grade >= 70) {
+        student.grade = 'C'
+    } else if (student.grade >= 60) {
+        student.grade = 'D'
+    } else {
+        student.grade = 'F'
+    }
 }
 
-compareCarts(
-  customer1,
-  customer2,
-  price1,
-  quantity1,
-  price2,
-  quantity2,
-  2000
-);
+console.log(students)
